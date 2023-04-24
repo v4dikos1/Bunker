@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\Abilities\AffectPlayer\" />
+    <Folder Include="Entities\Abilities\AffectGame\" />
+  </ItemGroup>
+
 </Project>
