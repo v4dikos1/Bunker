@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/BunkerApi/appsettings.json
+/Persistence/Uploads/ae1addd6-4c10-41a0-a5d7-fff520ee0a8e
