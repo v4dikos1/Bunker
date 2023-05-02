@@ -14,7 +14,7 @@ namespace Domain.Bl.Abilities.AffectBunker
 
         public GameInfo Use(GameInfo game)
         {
-            game.Bunker = game.GenerateBunker(game.Pack, game.Bunker.Size, game.Bunker.FoodCount);
+            //game.Bunker = game.GenerateBunker(game.Pack, game.Bunker.Size, game.Bunker.FoodCount);
 
             return game;
         }

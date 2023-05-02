@@ -16,6 +16,7 @@ namespace Persistence
             });
             services.AddScoped<IBunkerDbContext>(provider => provider.GetService<BunkerDbContext>());
 
+            services.AddSingleton<IFileService, FIleService>();
 
             return services;
         }

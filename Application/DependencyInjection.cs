@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using MediatR;
+using Application.Common.Interfaces;
+using Application.Common.Services;
 
 namespace Application
 {
@@ -11,6 +13,9 @@ namespace Application
             services.AddMediatR(cfg =>
                 cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
             );
+
+            services.AddSingleton<IPasswordService, PasswordService>();
+            services.AddSingleton<ITokenService, TokenService>();
 
             return services;
         }

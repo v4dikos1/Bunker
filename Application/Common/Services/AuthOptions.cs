@@ -1,7 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace BunkerApi.Auth
+namespace Application.Common.Services
 {
     public class AuthOptions
     {
