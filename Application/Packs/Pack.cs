@@ -8,6 +8,7 @@ using Application.Healths;
 using Application.Hobbies;
 using Application.Luggages;
 using Application.Professions;
+using Application.Users;
 using AutoMapper;
 
 namespace Application.Packs
@@ -28,6 +29,12 @@ namespace Application.Packs
         /// Описание
         /// </summary>
         public string Description { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Создатель пака
+        /// </summary>
+        public Guid OwnerId { get; set; }
+        public User Owner { get; set; } = null!;
 
         /// <summary>
         /// Набор профессий

@@ -1,4 +1,5 @@
 ﻿using Application.Common.Mappings;
+using Application.Packs;
 using Application.Pictures;
 using AutoMapper;
 
@@ -35,6 +36,11 @@ namespace Application.Users
         /// </summary>
         public Guid? PictureId { get; set; }
         public Picture? Picture { get; set; }
+
+        /// <summary>
+        /// Созданные паки
+        /// </summary>
+        public List<Pack> Packs { get; set; } = new List<Pack>();
 
 
         public void Mapping(Profile profile)
