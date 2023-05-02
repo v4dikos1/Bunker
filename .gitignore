@@ -16,6 +16,14 @@
 # Mono auto generated files
 mono_crash.*
 
+.vs
+.vs/
+
+Server/.vs
+Server/.vs/
+Server/.idea
+Server/EasyTalk.Persistence/Uploads/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
