@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities.Abilities.Interfaces
+﻿namespace Domain.Bl.Abilities.Interfaces
 {
     /// <summary>
     /// Уникальная способность

@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+﻿namespace Domain.Entities.BunkerContext
 {
     /// <summary>
     /// Бункер
@@ -18,17 +18,17 @@
         /// <summary>
         /// Постройка в бункере
         /// </summary>
-        public BunkerItem Building { get; set; } = null!;
+        public BunkerBuilding Building { get; set; }
 
         /// <summary>
         /// Хорошая составляющая бункера
         /// </summary>
-        public BunkerItem Buff { get; set; } = null!;
+        public BunkerBuff Buff { get; set; }
 
         /// <summary>
         /// Поломка или отрицательный эффект бункера
         /// </summary>
-        public BunkerItem Debuff { get; set; } = null!;
+        public BunkerDebuff Debuff { get; set; }
 
         /// <summary>
         /// Создание бункера
@@ -38,7 +38,7 @@
         /// <param name="building">Постройка</param>
         /// <param name="buff">Бафф</param>
         /// <param name="debuff">Дебафф</param>
-        public Bunker(int size, int foodCount, BunkerItem building, BunkerItem buff, BunkerItem debuff)
+        public Bunker(int size, int foodCount, BunkerBuilding building, BunkerBuff buff, BunkerDebuff debuff)
         {
             Size = size;
             FoodCount = foodCount;

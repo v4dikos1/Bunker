@@ -1,9 +1,9 @@
-﻿namespace Domain.Entities
+﻿namespace Domain.Entities.BunkerContext
 {
     /// <summary>
-    /// Багаж игрока
+    /// Дебафф бункера
     /// </summary>
-    public class Luggage
+    public class BunkerDebuff
     {
         public string Name { get; set; } = string.Empty;
     }

@@ -1,6 +1,7 @@
-﻿using Domain.Entities.Abilities.Interfaces;
+﻿using Domain.Bl.Abilities.Interfaces;
+using Domain.Entities.GameContext;
 
-namespace Domain.Entities.Abilities.AffectBunker
+namespace Domain.Bl.Abilities.AffectBunker
 {
     public class GenerateNewBunkerAbility : IGameAffectAbility
     {
@@ -11,7 +12,7 @@ namespace Domain.Entities.Abilities.AffectBunker
         public string Description { get; } =
             "Generate a new bunker. The amount of food in the bunker will be changed. Structures and breakdowns in the bunker will also be changed.";
 
-        public Game Use(Game game)
+        public GameInfo Use(GameInfo game)
         {
             game.Bunker = game.GenerateBunker(game.Pack, game.Bunker.Size, game.Bunker.FoodCount);
 

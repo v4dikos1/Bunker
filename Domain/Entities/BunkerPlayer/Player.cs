@@ -1,6 +1,6 @@
-﻿using Domain.Entities.Abilities.Interfaces;
+﻿using Domain.Bl.Abilities.Interfaces;
 
-namespace Domain.Entities
+namespace Domain.Entities.BunkerPlayer
 {
     /// <summary>
     /// Сущность игрока
@@ -57,7 +57,7 @@ namespace Domain.Entities
         /// <summary>
         /// Набор уникальных спобностей
         /// </summary>
-        public IEnumerable<IAbility> Abilities { get; set; } = new List<IAbility>();
+        public IEnumerable<IAbility> Abilities { get; set; } = null!;
 
     }
 }

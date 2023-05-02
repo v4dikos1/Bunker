@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Abilities\AffectPlayer\" />
-    <Folder Include="Entities\Abilities\AffectGame\" />
+    <Folder Include="Bl\Abilities\AffectPlayer\" />
+    <Folder Include="Bl\Abilities\AffectGame\" />
   </ItemGroup>
 
 </Project>

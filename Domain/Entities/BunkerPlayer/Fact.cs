@@ -1,9 +1,9 @@
-﻿namespace Domain.Entities
+﻿namespace Domain.Entities.BunkerPlayer
 {
     /// <summary>
-    /// Профессия игрока
+    /// Факт об игроке
     /// </summary>
-    public class Profession
+    public class Fact
     {
         public string Name { get; set; } = string.Empty;
     }

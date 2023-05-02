@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities.Abilities.Interfaces
+﻿using Domain.Entities.Bunker;
+
+namespace Domain.Bl.Abilities.Interfaces
 {
     /// <summary>
     /// Уникальная способность, вляющая на бункер
