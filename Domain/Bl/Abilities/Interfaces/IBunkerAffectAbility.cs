@@ -1,4 +1,4 @@
-﻿using Domain.Entities.Bunker;
+﻿using Domain.Entities.BunkerContext;
 
 namespace Domain.Bl.Abilities.Interfaces
 {

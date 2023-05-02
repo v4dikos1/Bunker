@@ -6,4 +6,43 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BunkerBuffs\Commands\" />
+    <Folder Include="BunkerBuffs\Queries\" />
+    <Folder Include="BunkerBuildings\Commands\" />
+    <Folder Include="BunkerBuildings\Queries\" />
+    <Folder Include="BunkerDebuffs\Commands\" />
+    <Folder Include="BunkerDebuffs\Queries\" />
+    <Folder Include="Disasters\Commands\" />
+    <Folder Include="Disasters\Queries\" />
+    <Folder Include="Facts\Commands\" />
+    <Folder Include="Facts\Queries\" />
+    <Folder Include="Healths\Commands\" />
+    <Folder Include="Healths\Queries\" />
+    <Folder Include="Hobbies\Commands\" />
+    <Folder Include="Hobbies\Queries\" />
+    <Folder Include="Luggages\Commands\" />
+    <Folder Include="Luggages\Queries\" />
+    <Folder Include="Packs\Commands\" />
+    <Folder Include="Packs\Queries\" />
+    <Folder Include="Pictures\Commands\" />
+    <Folder Include="Pictures\Queries\" />
+    <Folder Include="Players\Commands\" />
+    <Folder Include="Players\Queries\" />
+    <Folder Include="Professions\Commands\" />
+    <Folder Include="Professions\Queries\" />
+    <Folder Include="Users\Commands\" />
+    <Folder Include="Users\Queries\" />
+  </ItemGroup>
+
 </Project>

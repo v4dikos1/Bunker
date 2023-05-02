@@ -9,13 +9,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastucture", "Infrastuct
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C8A8E094-29F9-44A8-B450-5B0818363138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F9F32C68-D546-48B6-99B7-603BBAEC4DF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{F9F32C68-D546-48B6-99B7-603BBAEC4DF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{8ED4A707-A594-4E8E-A4E9-8433B0A64983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{8ED4A707-A594-4E8E-A4E9-8433B0A64983}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9F32C68-D546-48B6-99B7-603BBAEC4DF5} = {F9F32C68-D546-48B6-99B7-603BBAEC4DF5}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{4CA4EFAF-9E21-4FE8-9479-C0A8E51A853F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{4CA4EFAF-9E21-4FE8-9479-C0A8E51A853F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BunkerApi", "BunkerApi\BunkerApi.csproj", "{CE3F06D8-F424-4086-A220-B14C674E026C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BunkerApi", "BunkerApi\BunkerApi.csproj", "{CE3F06D8-F424-4086-A220-B14C674E026C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
