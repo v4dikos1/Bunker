@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
     <PackageReference Include="MediatR" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
@@ -42,12 +44,10 @@
     <Folder Include="Luggages\Queries\" />
     <Folder Include="Packs\Commands\" />
     <Folder Include="Packs\Queries\" />
-    <Folder Include="Pictures\Queries\" />
     <Folder Include="Players\Commands\" />
     <Folder Include="Players\Queries\" />
     <Folder Include="Professions\Commands\" />
     <Folder Include="Professions\Queries\" />
-    <Folder Include="Users\Queries\" />
   </ItemGroup>
 
 </Project>

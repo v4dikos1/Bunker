@@ -2,6 +2,7 @@
 using Application.Packs;
 using Application.Pictures;
 using AutoMapper;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Users
 {
@@ -41,7 +42,6 @@ namespace Application.Users
         /// Созданные паки
         /// </summary>
         public List<Pack> Packs { get; set; } = new List<Pack>();
-
 
         public void Mapping(Profile profile)
         {
