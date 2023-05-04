@@ -15,7 +15,7 @@ namespace Domain.Bl
         private const int MinPlayerAge = 14;
         private const int MaxPlayerAge = 121;
 
-        private readonly GameInfo _gameInfo;
+        public GameInfo GameInfo { get; set; }
         private readonly Pack _pack; 
 
         public GameHandler(int playerCount, Pack pack, IEnumerable<User> users)
@@ -24,7 +24,7 @@ namespace Domain.Bl
 
             _pack = pack;
 
-            _gameInfo = new GameInfo
+            GameInfo = new GameInfo
             {
                 Time = rnd.Next(MinDays, MaxDays),
                 Pack = _pack,
@@ -35,6 +35,7 @@ namespace Domain.Bl
             };
         }
 
+
         /// <summary>
         /// Исключение игрока
         /// </summary>
@@ -42,7 +43,7 @@ namespace Domain.Bl
         /// <returns>Возвращает исключенного игрока</returns>
         public Player KickPlayer(Guid id)
         {
-            var player = _gameInfo.Players.First(p => p.UserId == id);
+            var player = GameInfo.Players.First(p => p.UserId == id);
             player.IsKicked = true;
 
             return player;
@@ -50,7 +51,7 @@ namespace Domain.Bl
 
         //public void UseAbility(Player player, int abilityId)
         //{
-        //    var ability = _gameInfo.Abilities.First(a => a.Id == abilityId);
+        //    var ability = GameInfo.Abilities.First(a => a.Id == abilityId);
 
         //    if (player.Abilities.FirstOrDefault(a => a.Id == ability.Id) != null)
         //    {

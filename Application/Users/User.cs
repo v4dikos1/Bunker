@@ -2,7 +2,6 @@
 using Application.Packs;
 using Application.Pictures;
 using AutoMapper;
-using System.ComponentModel.DataAnnotations;
 
 namespace Application.Users
 {
