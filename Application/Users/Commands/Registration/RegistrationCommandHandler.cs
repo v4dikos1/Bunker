@@ -1,26 +1,39 @@
 ﻿using Application.Common.Exceptions;
 using Application.Common.Interfaces;
 using Application.Pictures.Commands.AddPicture;
+using AutoMapper;
+using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Users.Commands.Registration
 {
-    public class RegistrationCommandHandler : IRequestHandler<RegistrationCommand>
+    public class RegistrationCommandHandler : IRequestHandler<RegistrationCommand, UserProfileVm>
     {
         private readonly IPasswordService _passwordService;
         private readonly IBunkerDbContext _dbContext;
         private readonly IMediator _mediator;
+        private readonly IValidator<RegistrationCommand> _validator;
+        private readonly IMapper _mapper;
 
-        public RegistrationCommandHandler(IPasswordService passwordService, IBunkerDbContext dbContext, IMediator mediator)
+        public RegistrationCommandHandler(IPasswordService passwordService, IBunkerDbContext dbContext, IMediator mediator,
+            IValidator<RegistrationCommand> validator, IMapper mapper)
         {
             _passwordService = passwordService;
             _dbContext = dbContext;
             _mediator = mediator;
+            _validator = validator;
+            _mapper = mapper;
         }
 
-        public async Task Handle(RegistrationCommand request, CancellationToken cancellationToken)
+        public async Task<UserProfileVm> Handle(RegistrationCommand request, CancellationToken cancellationToken)
         {
+            var validationResult = await _validator.ValidateAsync(request, cancellationToken);
+
+            if (!validationResult.IsValid)
+            {
+                throw new ValidationException(validationResult.Errors);
+            }
 
             if (await _dbContext.Users.FirstOrDefaultAsync(u => u.Email.Equals(request.Email), cancellationToken) != null)
             {
@@ -53,6 +66,7 @@ namespace Application.Users.Commands.Registration
 
             await _dbContext.SaveChangesAsync(cancellationToken);
 
+            return _mapper.Map<UserProfileVm>(user);
         }
     }
 }

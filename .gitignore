@@ -22,7 +22,7 @@ mono_crash.*
 Server/.vs
 Server/.vs/
 Server/.idea
-Server/EasyTalk.Persistence/Uploads/
+Server/Persistence/Uploads/
 
 # Build results
 [Dd]ebug/

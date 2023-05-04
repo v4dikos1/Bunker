@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.Users.Commands.Registration
 {
-    public class RegistrationCommand : IRequest
+    public class RegistrationCommand : IRequest<UserProfileVm>
     {
         /// <summary>
         /// Логин

@@ -25,7 +25,6 @@ namespace Persistence.EntityTypeConfigurations
             builder
                 .HasOne(u => u.Picture)
                 .WithOne(p => p.User)
-                .OnDelete(DeleteBehavior.Cascade)
                 .HasForeignKey<Picture>(p => p.UserId);
         }
     }

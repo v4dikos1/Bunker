@@ -50,6 +50,9 @@ namespace BunkerApi.Middleware
                     code = HttpStatusCode.Unauthorized;
                     break;
 
+                case UserOperationCancelledException:
+                    code = HttpStatusCode.Forbidden;
+                    break;
             }
 
             context.Response.ContentType = "application/json";

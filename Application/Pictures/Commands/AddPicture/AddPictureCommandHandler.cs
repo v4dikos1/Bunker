@@ -1,4 +1,5 @@
 ﻿using Application.Common.Interfaces;
+using FluentValidation;
 using MediatR;
 
 namespace Application.Pictures.Commands.AddPicture
@@ -7,15 +8,24 @@ namespace Application.Pictures.Commands.AddPicture
     {
         private readonly IBunkerDbContext _dbContext;
         private readonly IFileService _fileService;
+        private readonly IValidator<AddPictureCommand> _validator;
 
-        public AddPictureCommandHandler(IBunkerDbContext dbContext, IFileService fileService)
+        public AddPictureCommandHandler(IBunkerDbContext dbContext, IFileService fileService, IValidator<AddPictureCommand> validator)
         {
             _dbContext = dbContext;
             _fileService = fileService;
+            _validator = validator;
         }
 
         public async Task<Guid> Handle(AddPictureCommand request, CancellationToken cancellationToken)
         {
+            var validationResult = await _validator.ValidateAsync(request, cancellationToken);
+
+            if (!validationResult.IsValid)
+            {
+                throw new ValidationException(validationResult.Errors);
+            }
+
             var picture = new Picture
             {
                 UserId = request.UserId,

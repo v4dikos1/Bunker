@@ -37,6 +37,8 @@ builder.Services.AddAutoMapper(config =>
 builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
 
+builder.Services.AddValidation();
+
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
